@@ -25,28 +25,50 @@ function App() {
   useEffect(() => {
     getData()
   },[])
-  return data ?(
-   <>
-    {/* {
-      data.map((val, index) => {
-        return(
-          <>
-          <h1 key={index + 1}>{val.id }</h1>
-         
-          </>
-        )
-      })
-    } */}
 
-<table className="table-auto">
-  <thead>
-    <tr>
-      <th className="px-4 py-2">Course ID</th>
-      <th className="px-4 py-2">Course Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    {data.map((val) => (
+//   return data ?(
+//    <>
+//     {/* {
+//       data.map((val, index) => {
+//         return(
+//           <>
+//           <h1 key={index + 1}>{val.id }</h1>
+         
+//           </>
+//         )
+//       })
+//     } */}
+
+// <table className="table-auto">
+//   <thead>
+//     <tr>
+//       <th className="px-4 py-2">Course ID</th>
+//       <th className="px-4 py-2">Course Name</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     {data.map((val) => (
+//       <tr key={val.id}>
+//         <td className="border px-4 py-2">{val.id}</td>
+//         <td className="border px-4 py-2">{val.courseName}</td>
+//       </tr>
+//     ))}
+//   </tbody>
+// </table>
+//    </>
+//   ) : (<h1>Loading</h1>)
+
+return (
+  <>
+  <table className="table-auto">
+   <thead>
+     <tr>
+       <th className="px-4 py-2">Course ID</th>
+       <th className="px-4 py-2">Course Name</th>
+     </tr>
+   </thead>
+   <tbody>
+     {data.map((val) => (
       <tr key={val.id}>
         <td className="border px-4 py-2">{val.id}</td>
         <td className="border px-4 py-2">{val.courseName}</td>
@@ -54,8 +76,8 @@ function App() {
     ))}
   </tbody>
 </table>
-   </>
-  ) : (<h1>Loading</h1>)
+  </>
+);
 }
 
 export default App
