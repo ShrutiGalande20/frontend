@@ -68,10 +68,10 @@ return (
      </tr>
    </thead>
    <tbody>
-     {data.map((val) => (
-      <tr key={val.id}>
-        <td className="border px-4 py-2">{val.id}</td>
-        <td className="border px-4 py-2">{val.courseName}</td>
+     {data.map((item, index) => (
+      <tr key={item.id}>
+        <td className="border px-4 py-2">{item.id}</td>
+        <td className="border px-4 py-2">{item.courseName}</td>
       </tr>
     ))}
   </tbody>
