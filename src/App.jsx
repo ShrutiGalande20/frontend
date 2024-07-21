@@ -60,22 +60,17 @@ function App() {
 
 return (
   <>
-  <table className="table-auto">
-   <thead>
-     <tr>
-       <th className="px-4 py-2">Course ID</th>
-       <th className="px-4 py-2">Course Name</th>
-     </tr>
-   </thead>
-   <tbody>
-     {data.map((item, index) => (
-      <tr key={item.id}>
-        <td className="border px-4 py-2">{item.id}</td>
-        <td className="border px-4 py-2">{item.courseName}</td>
-      </tr>
+ <div>
+  <h1>Course </h1>
+  <ul>
+    {data.map((item) => (
+      <li key={item.id}>
+        Course ID: {item.id} - {item.courseName}
+      </li>
     ))}
-  </tbody>
-</table>
+  </ul>
+</div>
+
   </>
 );
 }
