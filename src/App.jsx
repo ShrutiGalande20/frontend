@@ -26,7 +26,7 @@ function App() {
     getData()
   },[])
 
-  return data ?(
+  return (
    <>
     {/* {
       data.map((val, index) => {
@@ -38,7 +38,7 @@ function App() {
         )
       })
     } */}
-
+{/* 
 <table className="table-auto">
   <thead>
     <tr>
@@ -56,9 +56,18 @@ function App() {
   </tbody>
 </table>
    </>
-  ) : (<h1>Loading</h1>)
+  ) : (<h1>Loading</h1>) */}
 
-
+<div>
+      <h1>Data</h1>
+      <ul>
+        {data.map((item, index) => (
+          <li key={index}>{item.courseName}</li>
+        ))}
+      </ul>
+    </div>
+</>
+)
 }
 
 export default App
